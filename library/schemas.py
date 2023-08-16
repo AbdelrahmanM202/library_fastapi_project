@@ -3,11 +3,11 @@ from pydantic import BaseModel
 
 class BookBase(BaseModel):
     title: str
-    auther: str
+    author: str
     image: str
     description: str
     publish_date: str
-    description: str #| None = None
+    #description: str #| None = None
 
 
 class BookCreate(BookBase):
@@ -16,7 +16,7 @@ class BookCreate(BookBase):
 
 class Book(BookBase):
     id: int
-    owner_id: int
+    #owner_id: int
 
     class Config:
         from_attributes = True
