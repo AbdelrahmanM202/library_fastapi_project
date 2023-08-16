@@ -1,6 +1,4 @@
 from sqlalchemy import Column, Integer, String
-#from sqlalchemy.orm import relationship
-
 from library.database import Base
 
 
@@ -11,9 +9,6 @@ class User(Base):
     name = Column(String, unique=True, index=True)
     email = Column(String, unique=True, index=True)
     number = Column(String, unique=True, index=True)
-    #is_active = Column(Boolean, default=True)
-
-    #items = relationship("Item", back_populates="owner")
 
 
 class Book(Base):
@@ -25,5 +20,3 @@ class Book(Base):
     image = Column(String, index=True)
     description = Column(String, index=True)
     publish_date = Column(String, index=True)
-
-    #owner = relationship("User", back_populates="items")

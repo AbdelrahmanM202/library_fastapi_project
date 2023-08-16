@@ -7,7 +7,6 @@ class BookBase(BaseModel):
     image: str
     description: str
     publish_date: str
-    #description: str #| None = None
 
 
 class BookCreate(BookBase):
@@ -16,11 +15,9 @@ class BookCreate(BookBase):
 
 class Book(BookBase):
     id: int
-    #owner_id: int
 
     class Config:
         from_attributes = True
-        #orm_mode = True
 
 
 class UserBase(BaseModel):
@@ -32,12 +29,10 @@ class UserBase(BaseModel):
 class UserCreate(UserBase):
     pass
 
+
 class User(UserBase):
     id: int
 
-    # is_active: bool
-    # items: list[Item] = []
 
     class Config:
         from_attributes = True
-        #orm_mode = True
